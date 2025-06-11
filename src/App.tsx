@@ -1,14 +1,16 @@
-import React from 'react';
-import LoginView from './views/LoginView';
-import RegisterView from './views/RegisterView';
+// main.tsx ou App.tsx
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './pages/Login';
 
 function App() {
   return (
-    <div>
-      <LoginView />
-      <hr />
-      <RegisterView />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
